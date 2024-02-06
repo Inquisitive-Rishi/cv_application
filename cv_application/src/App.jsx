@@ -4,18 +4,24 @@ import ExperienceForm from "./Forms/ExperienceForm"
 import PersonalForm from "./Forms/PersonalForm"
 
 function App() {
-  const [open, setOpen] = useState(true)
+  const [educationOpen, setEducationOpen] = useState(false)
+  const [experienceOpen, setExperienceOpen] = useState(false)
 
-  function handleFormDisplay(e) {
+  function handleEducationDisplay(e) {
     e.preventDefault()
-    setOpen(prevState => !prevState)
+    setEducationOpen(prevState => !prevState)
+  }
+
+  function handleExperienceDisplay(e) {
+    e.preventDefault()
+    setExperienceOpen(prevState => !prevState)
   }
 
   return (
     <>
       <PersonalForm/>
-      <EducationForm handleFormDisplay={handleFormDisplay} open={open}/>
-      <ExperienceForm handleFormDisplay={handleFormDisplay} open={open}/>
+      <EducationForm handleFormDisplay={handleEducationDisplay} open={educationOpen}/>
+      <ExperienceForm handleFormDisplay={handleExperienceDisplay} open={experienceOpen}/>
     </>
   )
 }

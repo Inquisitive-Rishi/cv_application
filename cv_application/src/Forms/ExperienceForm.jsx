@@ -1,11 +1,11 @@
 
 export default function ExperienceForm({handleChange, handleSubmit, handleFormDisplay, open}) {
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="min-w-[330px]">
       <fieldset>
         <div className="flex justify-between items-center">
           <legend>Experience</legend>
-          <button className="font-bold text-2xl" onClick={handleFormDisplay}>{open ? "+" : "-"}</button>
+          <button className="font-bold text-2xl" onClick={handleFormDisplay}>{open ? "-" : "+"}</button>
         </div>
         {open && 
         <div>
