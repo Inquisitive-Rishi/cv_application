@@ -2,6 +2,7 @@ import { useState } from "react"
 import EducationForm from "./Forms/EducationForm"
 import ExperienceForm from "./Forms/ExperienceForm"
 import PersonalForm from "./Forms/PersonalForm"
+import Resume from "./Resume"
 
 function App() {
   const [educationOpen, setEducationOpen] = useState(false)
@@ -18,11 +19,14 @@ function App() {
   }
 
   return (
-    <>
-      <PersonalForm/>
-      <EducationForm handleFormDisplay={handleEducationDisplay} open={educationOpen}/>
-      <ExperienceForm handleFormDisplay={handleExperienceDisplay} open={experienceOpen}/>
-    </>
+    <div className="flex gap-10">
+      <div>
+        <PersonalForm/>
+        <EducationForm handleFormDisplay={handleEducationDisplay} open={educationOpen}/>
+        <ExperienceForm handleFormDisplay={handleExperienceDisplay} open={experienceOpen}/>
+      </div>
+      <Resume/>
+    </div>
   )
 }
 
