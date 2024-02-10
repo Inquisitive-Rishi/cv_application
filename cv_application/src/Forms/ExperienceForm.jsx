@@ -1,3 +1,5 @@
+import DeleteButton from "../buttons/DeleteButton";
+import SubmitButton from "../buttons/SubmitButton";
 
 export default function ExperienceForm({handleChange, handleSubmit, handleFormDisplay, open}) {
   return (
@@ -33,6 +35,10 @@ export default function ExperienceForm({handleChange, handleSubmit, handleFormDi
           <br />
           <textarea name="description" id="description" cols="28" rows="5" placeholder="This is a sample text..."></textarea>
           <br />
+          <div className="flex gap-2">
+            <DeleteButton txt="Delete" alt="trash img" />
+            <SubmitButton txt="Submit"/>
+          </div>
         </div>
         }
       </fieldset>

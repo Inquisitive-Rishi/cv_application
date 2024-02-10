@@ -1,3 +1,6 @@
+import DeleteButton from "../buttons/DeleteButton";
+import SubmitButton from "../buttons/SubmitButton";
+
 export default function EducationForm({handleChange, handleSubmit, handleFormDisplay, open}) {
   return (
     <form onSubmit={handleSubmit} className="min-w-[330px]">
@@ -27,6 +30,10 @@ export default function EducationForm({handleChange, handleSubmit, handleFormDis
               <br />
               <input type='text' id='to' placeholder="21-04-2024" name='to' onChange={handleChange}/>
             </div>
+          </div>
+          <div className="flex gap-2">
+            <DeleteButton txt="Delete" alt="trash img" />
+            <SubmitButton txt="Submit"/>
           </div>
         </div>
         }
